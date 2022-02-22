@@ -1,0 +1,6 @@
+IbanHelper.Tests/bin/*
+IbanHelper.Tests/obj/*
+IbanHelper/.vs/*
+IbanHelper/bin/*
+IbanHelper/obj/*
+IbanHelper/.vs/IbanHelper/DesignTimeBuild/.dtbcache.v2

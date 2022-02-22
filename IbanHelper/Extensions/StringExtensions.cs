@@ -15,16 +15,9 @@ namespace IbanHelper.Extensions
             return String.Concat(input.Where(c => !Char.IsWhiteSpace(c)));
         }
 
-        public static bool ContainsAnySpecialCharacters(this string input)
+        public static bool ContainsOnlyLettersOrDigits(this string input)
         {
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (!char.IsLetterOrDigit(input, i))
-                {
-                    return true;
-                }
-            }
-            return false;
+            return input.All(char.IsLetterOrDigit);
         }
     }
 }

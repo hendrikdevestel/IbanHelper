@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IbanHelper.Enums
+﻿namespace IbanHelper.Enums
 {
     public enum ErrorCode
     {
