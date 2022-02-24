@@ -100,5 +100,23 @@ namespace IbanHelper.Tests
             Assert.IsTrue(isValidCard.IsValid);
         }
 
+        [Test]
+        [TestCase("NL02ABNA0123456789", "Abn Amro Bank")]
+        [TestCase("NL20INGB0001234567", "ING")]
+        [TestCase("NL91 ABNA 0417 1643 00", "Abn Amro Bank")]
+        [TestCase("GB82WEST12345698765432", "Unknown")]
+        [TestCase("GB33BUKB20201555555555", "Unknown")]
+        [TestCase("DE75512108001245126199", "Unknown")]
+        [TestCase("FR7630006000011234567890189", "Crédit Agricole S.A.")]
+        [TestCase("FR 14 20041 01005 0500013M026 06", "La Banque Postale")]
+        [TestCase("FR7630056009271234567890182", "HSBC France")]
+        [TestCase("FR7630004000031234567890143", "BNP Paribas")]
+        public void TestBankName(string cardnumber, string bankName)
+        {
+            var card = IbanValidator.Validate(cardnumber);
+
+            Assert.AreEqual(bankName, card.BankName);
+        }
+
     }
 }
