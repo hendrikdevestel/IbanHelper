@@ -2,7 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+	  <Version>1.0.0</Version>
 	  <LangVersion>8</LangVersion>
+	  <Authors>Devestel</Authors>
+	  <Company>Devestel</Company>
+	  <RepositoryUrl>https://github.com/hendrikdevestel/IbanHelper</RepositoryUrl>
+	  <NeutralLanguage>en</NeutralLanguage>
+	  
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Description>An easy helper to validate IBAN numbers and check the bank name.</Description>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/hendrikdevestel/IbanHelper</PackageProjectUrl>
+	  <PackageTags>IBAN Bank validator number BBAN BIC</PackageTags>
+	  <PackageReleaseNotes>Initial package</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
