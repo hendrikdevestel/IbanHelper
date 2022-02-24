@@ -107,7 +107,6 @@ namespace IbanHelper.Tests
         [TestCase("GB82WEST12345698765432", "Unknown")]
         [TestCase("GB33BUKB20201555555555", "Unknown")]
         [TestCase("DE75512108001245126199", "Unknown")]
-        [TestCase("FR7630006000011234567890189", "Crédit Agricole S.A.")]
         [TestCase("FR 14 20041 01005 0500013M026 06", "La Banque Postale")]
         [TestCase("FR7630056009271234567890182", "HSBC France")]
         [TestCase("FR7630004000031234567890143", "BNP Paribas")]
