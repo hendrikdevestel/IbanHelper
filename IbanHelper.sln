@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanHelper", "IbanHelper.csproj", "{36C030CA-7704-42AA-80C8-5B34F89E0AA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanHelper", "IbanHelper\IbanHelper.csproj", "{36C030CA-7704-42AA-80C8-5B34F89E0AA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanHelper.Tests", "..\IbanHelper.Tests\IbanHelper.Tests.csproj", "{4E329DE4-0078-4C40-9A2D-52DC65FF482B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanHelper.Tests", "IbanHelper.Tests\IbanHelper.Tests.csproj", "{4E329DE4-0078-4C40-9A2D-52DC65FF482B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
