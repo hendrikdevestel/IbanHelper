@@ -1,34 +1,24 @@
-name: NUGET_API_KEY
-
+name: Nuget IbanHelper
 on:
   push:
     branches:
-      - main
-  pull_request:
-    types: [closed]
-    branches:
-      - main
-
+    - main
 jobs:
-  build:
+  publish-nuget:
     runs-on: ubuntu-latest
-    name: Update NuGet package
     steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@v1
-
-      - name: Setup .NET Core @ Latest
-        uses: actions/setup-dotnet@v1
-        with:
-          source-url: https://nuget.pkg.github.com/devestel/index.json
-        env:
-          NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}        
-          
-      - name: Build solution and generate NuGet package
-        run: |  
-          cd IbanHelper
-          dotnet pack -c Release -o out  
-
-      - name: Push generated package to GitHub registry
-        run: dotnet nuget push ./IbanHelper/out/*.nupkg --skip-duplicate --no-symbols true
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build — configuration Release — no-restore
+    - name: Publish to NuGet
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+        PROJECT_FILE_PATH: IbanHelper/IbanHelper.csproj
+        PACKAGE_NAME: IbanHelper
+        VERSION_REGEX: ‘^\s*<Version>(.*)<\/Version>\s*$’
+        TAG_FORMAT: ‘*’
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
