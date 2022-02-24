@@ -5,7 +5,6 @@
         public string CountryCode => "SI";
 
         public int Length => 19;
-
     }
 }
 
